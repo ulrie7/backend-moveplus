@@ -1,0 +1,352 @@
+{
+  "RefreshAdminTokenPayload": {
+    "type": "object",
+    "properties": {
+      "refreshToken": {
+        "type": "string",
+        "example": "refresh-token-123",
+        "description": "Token to refresh the session"
+      }
+    }
+  },
+  "RefreshAdminTokenResponse": {
+    "type": "object",
+    "properties": {
+      "accessToken": {
+        "type": "string",
+        "example": "new-access-token-123",
+        "description": "New JWT access token"
+      },
+      "refreshToken": {
+        "type": "string",
+        "example": "new-refresh-token-123",
+        "description": "New JWT refresh token"
+      }
+    }
+  },
+  "SignoutAdminResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Successfully signed out",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "SigninAdminPayload": {
+    "type": "object",
+    "properties": {
+      "password": {
+        "type": "string",
+        "example": "password123",
+        "description": "User password"
+      },
+      "email": {
+        "type": "string",
+        "example": "user@example.com",
+        "description": "User email address"
+      }
+    }
+  },
+  "SigninAdminResponse": {
+    "type": "object",
+    "properties": {
+      "accessToken": {
+        "type": "string",
+        "example": "access-token-123",
+        "description": "JWT access token"
+      },
+      "refreshToken": {
+        "type": "string",
+        "example": "refresh-token-123",
+        "description": "JWT refresh token"
+      }
+    }
+  },
+  "AdminForgetPasswordPayload": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string",
+        "example": "user@example.com",
+        "description": "User email address to send reset instructions"
+      }
+    }
+  },
+  "AdminForgetPasswordResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Password reset instructions sent",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "AdminResetPasswordPayload": {
+    "type": "object",
+    "properties": {
+      "token": {
+        "type": "string",
+        "example": "reset-token-123",
+        "description": "Password reset token"
+      },
+      "password": {
+        "type": "string",
+        "example": "newpassword123",
+        "description": "New password"
+      }
+    }
+  },
+  "AdminResetPasswordResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Password successfully reset",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "ResendAdminAccountVerificationCodePayload": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string",
+        "example": "user@example.com",
+        "description": "User email address to resend verification code"
+      }
+    }
+  },
+  "ResendAdminAccountVerificationCodeResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Verification code resent",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "ActivateAdminMfaTokenPayload": {
+    "type": "object",
+    "properties": {
+      "accessToken": {
+        "type": "string",
+        "example": "new-access-token-123",
+        "description": "New JWT access token"
+      },
+      "code": {
+        "type": "string",
+        "example": "4567",
+        "description": "MFA code"
+      }
+    }
+  },
+  "ActivateAdminMfaTokenResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "MFA token activated",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "GenerateAdminPasswordRestorationCodePayload": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string",
+        "example": "user@example.com",
+        "description": "User email address to generate the password restoration code"
+      }
+    }
+  },
+  "GenerateAdminPasswordRestorationCodeResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Password reset code sent successfully.",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "VerifyAdminPasswordResetCodePayload": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string",
+        "example": "user@example.com",
+        "description": "Email for account"
+      },
+      "code": {
+        "type": "string",
+        "example": "reset-code-123",
+        "description": "Code to verify the password reset"
+      }
+    }
+  },
+  "VerifyAdminPasswordResetCodeResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Password reset code verified",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "ResetAdminPasswordPayload": {
+    "type": "object",
+    "properties": {
+      "token": {
+        "type": "string",
+        "example": "reset-token-123",
+        "description": "Password reset token"
+      },
+      "password": {
+        "type": "string",
+        "example": "newpassword123",
+        "description": "New password"
+      }
+    }
+  },
+  "ResetAdminPasswordResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Password successfully reset",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "ChangeAdminPasswordPayload": {
+    "type": "object",
+    "properties": {
+      "oldPassword": {
+        "type": "string",
+        "example": "current-password-123",
+        "description": "The user's current password"
+      },
+      "newPassword": {
+        "type": "string",
+        "example": "new-password-456",
+        "description": "The user's new password"
+      }
+    }
+  },
+  "ChangeAdminPasswordResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Password changed successfully",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "GoogleAdminSigninPayload": {
+    "type": "object",
+    "properties": {
+      "token": {
+        "type": "string",
+        "example": "google-token-123",
+        "description": "Google sign-in token"
+      }
+    }
+  },
+  "ResendAdminMfaCodePayload": {
+    "type": "object",
+    "properties": {
+      "accessToken": {
+        "type": "string",
+        "example": "new-access-token-123",
+        "description": "New JWT access token"
+      }
+    }
+  },
+  "ResendAdminMfaCodeResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "MFA code resent",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "VerifyAdminAccountPayload": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string",
+        "example": "user@example.com",
+        "description": "User email address"
+      },
+      "code": {
+        "type": "string",
+        "example": "123456",
+        "description": "The verification code sent to the user's email or phone"
+      }
+    }
+  },
+  "VerifyAdminAccountResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Account successfully verified",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "GoogleAdminSigninResponse": {
+    "type": "object",
+    "properties": {
+      "accessToken": {
+        "type": "string",
+        "example": "access-token-123",
+        "description": "JWT access token after Google sign-in"
+      },
+      "refreshToken": {
+        "type": "string",
+        "example": "refresh-token-123",
+        "description": "JWT refresh token after Google sign-in"
+      }
+    }
+  },
+  "GoogleAdminCallbackResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "Google callback handled successfully",
+        "description": "Confirmation message"
+      }
+    }
+  },
+  "AdminSigninWithGooglePayload": {
+    "type": "object",
+    "properties": {
+      "access_token": {
+        "type": "string",
+        "example": "access-token-123",
+        "description": "Provide by Google"
+      },
+      "id_token": {
+        "type": "string",
+        "example": "id-token-123",
+        "description": "Provide by Google"
+      }
+    }
+  }
+}

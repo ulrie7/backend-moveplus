@@ -1,0 +1,489 @@
+{
+  "/api/v1/trajet": {
+    "post": {
+      "summary": "Create a new trajet",
+      "tags": [
+        "Trajet"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Create Trajet",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateTrajetPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTrajetResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of trajet",
+      "tags": [
+        "Trajet"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "createdBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the createdBy of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "updatedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the updatedBy of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "deletedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the deletedBy of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_startStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_startStart of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_startEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_startEnd of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_endStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_endStart of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_endEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_endEnd of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_time",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_time of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeLessThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeLessThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeGreaterThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeGreaterThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nb",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nb of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbLessThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbLessThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbGreaterThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbGreaterThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "status",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the status of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "vehicle_id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the vehicle_id of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distance",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distance of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceLessThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceLessThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceGreaterThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceGreaterThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speed",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speed of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedLessThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedLessThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedGreaterThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedGreaterThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speed",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speed of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedLessThan of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedLessThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedGreaterThanOrEqualTo of trajet",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedGreaterThan of trajet",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of trajet",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrajetPaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/trajet/{id}": {
+    "put": {
+      "summary": "Update a trajet by ID",
+      "tags": [
+        "Trajet"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "trajet id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Update Trajet",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateTrajetPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTrajetResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a trajet by ID",
+      "tags": [
+        "Trajet"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "trajet id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteTrajetResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one trajet by ID",
+      "tags": [
+        "Trajet"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "trajet id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Trajet",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindTrajetResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

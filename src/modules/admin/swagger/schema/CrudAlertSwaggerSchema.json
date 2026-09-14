@@ -1,0 +1,291 @@
+{
+  "Alert": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb01",
+        "description": "Unique identifier for the alert"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2026-01-27T16:49:20.883Z",
+        "description": "Timestamp when the alert was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2026-06-19T07:10:09.824Z",
+        "description": "Timestamp when the alert was last updated"
+      },
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb02",
+        "description": "CreatedBy of Alert"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb03",
+        "description": "UpdatedBy of Alert"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb04",
+        "description": "DeletedBy of Alert"
+      },
+      "gps_id": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb05",
+        "description": "Gps_id of Alert"
+      },
+      "alert_type": {
+        "type": "string",
+        "example": "Reprehenderit sequi xiphias cervus verumtamen explicabo comis cado.",
+        "description": "Alert_type of Alert"
+      },
+      "seuil": {
+        "type": "string",
+        "example": "Creber aeneus defleo cupressus temperantia vilis absens aut.",
+        "description": "Seuil of Alert"
+      },
+      "date_generation": {
+        "type": "string",
+        "example": "2026-05-10T23:17:47.715Z",
+        "description": "Date_generation of Alert"
+      },
+      "status": {
+        "type": "string",
+        "example": "Creo timidus eius teres convoco tergo absconditus claro.",
+        "description": "Status of Alert"
+      },
+      "message": {
+        "type": "string",
+        "example": "Statua umerus arguo.",
+        "description": "Message of Alert"
+      }
+    },
+    "required": []
+  },
+  "CreateAlertPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb07",
+        "description": "CreatedBy of Alert"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb08",
+        "description": "UpdatedBy of Alert"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb09",
+        "description": "DeletedBy of Alert"
+      },
+      "gps_id": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb0a",
+        "description": "Gps_id of Alert"
+      },
+      "alert_type": {
+        "type": "string",
+        "example": "Truculenter civitas uter cenaculum censura victus conqueror comburo tamisium denuncio.",
+        "description": "Alert_type of Alert"
+      },
+      "seuil": {
+        "type": "string",
+        "example": "Illo villa aestivus abutor provident cinis.",
+        "description": "Seuil of Alert"
+      },
+      "date_generation": {
+        "type": "string",
+        "example": "2026-05-10T16:31:02.152Z",
+        "description": "Date_generation of Alert"
+      },
+      "status": {
+        "type": "string",
+        "example": "Patria dolore textor delibero barba.",
+        "description": "Status of Alert"
+      },
+      "message": {
+        "type": "string",
+        "example": "Auxilium cinis comparo tero calculus depromo verecundia tabula bonus balbus.",
+        "description": "Message of Alert"
+      }
+    },
+    "required": []
+  },
+  "UpdateAlertPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb0c",
+        "description": "CreatedBy of Alert"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb0d",
+        "description": "UpdatedBy of Alert"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb0e",
+        "description": "DeletedBy of Alert"
+      },
+      "gps_id": {
+        "type": "string",
+        "example": "6a633b74a697a16adeafcb0f",
+        "description": "Gps_id of Alert"
+      },
+      "alert_type": {
+        "type": "string",
+        "example": "Absorbeo sollers caelum substantia stella aliquid carpo blandior.",
+        "description": "Alert_type of Alert"
+      },
+      "seuil": {
+        "type": "string",
+        "example": "Adversus desolo constans quis caput confugo.",
+        "description": "Seuil of Alert"
+      },
+      "date_generation": {
+        "type": "string",
+        "example": "2026-04-25T11:04:39.790Z",
+        "description": "Date_generation of Alert"
+      },
+      "status": {
+        "type": "string",
+        "example": "Arma velit coerceo accendo coruscus.",
+        "description": "Status of Alert"
+      },
+      "message": {
+        "type": "string",
+        "example": "Eveniet modi defendo terreo commodo suscipit cubicularis aperte.",
+        "description": "Message of Alert"
+      }
+    },
+    "required": []
+  },
+  "AlertPaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Alert"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateAlertResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Alert"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Alert created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateAlertResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Alert"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Alert updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteAlertResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Alert deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindAlertResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Alert"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Alert retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "AlertErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}

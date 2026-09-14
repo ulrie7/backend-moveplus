@@ -1,0 +1,336 @@
+{
+  "Trajet": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac7f",
+        "description": "Unique identifier for the trajet"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2025-12-05T12:54:28.646Z",
+        "description": "Timestamp when the trajet was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2026-05-10T06:07:23.256Z",
+        "description": "Timestamp when the trajet was last updated"
+      },
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac80",
+        "description": "CreatedBy of Trajet"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac81",
+        "description": "UpdatedBy of Trajet"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac82",
+        "description": "DeletedBy of Trajet"
+      },
+      "date_start": {
+        "type": "string",
+        "example": "2026-03-22T01:55:44.803Z",
+        "description": "Date_start of Trajet"
+      },
+      "date_end": {
+        "type": "string",
+        "example": "2025-07-25T02:24:14.032Z",
+        "description": "Date_end of Trajet"
+      },
+      "stop_time": {
+        "type": "string",
+        "example": 5441573678125516,
+        "description": "Stop_time of Trajet"
+      },
+      "stop_nb": {
+        "type": "string",
+        "example": 7582936922149771,
+        "description": "Stop_nb of Trajet"
+      },
+      "status": {
+        "type": "string",
+        "example": "Amicitia ea cribro vestrum consequatur tubineus magni solus pauci.",
+        "description": "Status of Trajet"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac83",
+        "description": "Vehicle_id of Trajet"
+      },
+      "distance": {
+        "type": "string",
+        "example": 7113707285447852,
+        "description": "Distance of Trajet"
+      },
+      "average_speed": {
+        "type": "string",
+        "example": 5460912065108373,
+        "description": "Average_speed of Trajet"
+      },
+      "max_speed": {
+        "type": "string",
+        "example": 1653518723854501,
+        "description": "Max_speed of Trajet"
+      }
+    },
+    "required": []
+  },
+  "CreateTrajetPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac85",
+        "description": "CreatedBy of Trajet"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac86",
+        "description": "UpdatedBy of Trajet"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac87",
+        "description": "DeletedBy of Trajet"
+      },
+      "date_start": {
+        "type": "string",
+        "example": "2026-07-06T19:12:03.315Z",
+        "description": "Date_start of Trajet"
+      },
+      "date_end": {
+        "type": "string",
+        "example": "2026-06-19T17:18:50.005Z",
+        "description": "Date_end of Trajet"
+      },
+      "stop_time": {
+        "type": "string",
+        "example": 806413839629979,
+        "description": "Stop_time of Trajet"
+      },
+      "stop_nb": {
+        "type": "string",
+        "example": 68331744045057,
+        "description": "Stop_nb of Trajet"
+      },
+      "status": {
+        "type": "string",
+        "example": "Traho totidem pecco vulnero quas.",
+        "description": "Status of Trajet"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac88",
+        "description": "Vehicle_id of Trajet"
+      },
+      "distance": {
+        "type": "string",
+        "example": 6034733264697447,
+        "description": "Distance of Trajet"
+      },
+      "average_speed": {
+        "type": "string",
+        "example": 7271531062046069,
+        "description": "Average_speed of Trajet"
+      },
+      "max_speed": {
+        "type": "string",
+        "example": 6641748015752606,
+        "description": "Max_speed of Trajet"
+      }
+    },
+    "required": []
+  },
+  "UpdateTrajetPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac8a",
+        "description": "CreatedBy of Trajet"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac8b",
+        "description": "UpdatedBy of Trajet"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac8c",
+        "description": "DeletedBy of Trajet"
+      },
+      "date_start": {
+        "type": "string",
+        "example": "2026-04-21T22:22:47.647Z",
+        "description": "Date_start of Trajet"
+      },
+      "date_end": {
+        "type": "string",
+        "example": "2025-12-16T04:13:15.896Z",
+        "description": "Date_end of Trajet"
+      },
+      "stop_time": {
+        "type": "string",
+        "example": 4401691026779481,
+        "description": "Stop_time of Trajet"
+      },
+      "stop_nb": {
+        "type": "string",
+        "example": 6733687310741665,
+        "description": "Stop_nb of Trajet"
+      },
+      "status": {
+        "type": "string",
+        "example": "Aspicio caterva sordeo sumptus ambulo.",
+        "description": "Status of Trajet"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b46a697a16adeafac8d",
+        "description": "Vehicle_id of Trajet"
+      },
+      "distance": {
+        "type": "string",
+        "example": 3775811866468421,
+        "description": "Distance of Trajet"
+      },
+      "average_speed": {
+        "type": "string",
+        "example": 1844066318208049,
+        "description": "Average_speed of Trajet"
+      },
+      "max_speed": {
+        "type": "string",
+        "example": 5289804635242380,
+        "description": "Max_speed of Trajet"
+      }
+    },
+    "required": []
+  },
+  "TrajetPaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Trajet"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateTrajetResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Trajet"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Trajet created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateTrajetResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Trajet"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Trajet updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteTrajetResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Trajet deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindTrajetResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Trajet"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Trajet retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "TrajetErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}

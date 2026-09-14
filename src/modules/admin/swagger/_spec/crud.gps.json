@@ -1,0 +1,318 @@
+{
+  "/api/v1/gps": {
+    "post": {
+      "summary": "Create a new gps",
+      "tags": [
+        "GPS"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Create GPS",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateGPSPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGPSResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of gps",
+      "tags": [
+        "GPS"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "createdBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the createdBy of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "updatedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the updatedBy of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "deletedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the deletedBy of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "imei",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the imei of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "status",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the status of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "battery",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the battery of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "batteryLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the batteryLessThan of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "batteryLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the batteryLessThanOrEqualTo of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "batteryGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the batteryGreaterThanOrEqualTo of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "batteryGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the batteryGreaterThan of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "brand",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the brand of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "last_connexionStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the last_connexionStart of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "last_connexionEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the last_connexionEnd of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "model_device",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the model_device of gps",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "vehicle_id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the vehicle_id of gps",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of gps",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GPSPaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/gps/{id}": {
+    "put": {
+      "summary": "Update a gps by ID",
+      "tags": [
+        "GPS"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "gps id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Update GPS",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateGPSPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGPSResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a gps by ID",
+      "tags": [
+        "GPS"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "gps id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteGPSResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one gps by ID",
+      "tags": [
+        "GPS"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "gps id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One GPS",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindGPSResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

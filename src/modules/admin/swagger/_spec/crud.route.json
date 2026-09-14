@@ -1,0 +1,489 @@
+{
+  "/api/v1/route": {
+    "post": {
+      "summary": "Create a new route",
+      "tags": [
+        "Route"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Create Route",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateRoutePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRouteResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of route",
+      "tags": [
+        "Route"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "createdBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the createdBy of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "updatedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the updatedBy of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "deletedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the deletedBy of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_startStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_startStart of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_startEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_startEnd of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_endStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_endStart of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_endEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_endEnd of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_time",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_time of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeLessThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeLessThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeGreaterThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_timeGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_timeGreaterThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nb",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nb of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbLessThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbLessThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbGreaterThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "stop_nbGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the stop_nbGreaterThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "status",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the status of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "vehicle_id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the vehicle_id of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distance",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distance of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceLessThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceLessThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceGreaterThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "distanceGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the distanceGreaterThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speed",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speed of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedLessThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedLessThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedGreaterThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "average_speedGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the average_speedGreaterThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speed",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speed of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedLessThan of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedLessThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedGreaterThanOrEqualTo of route",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "max_speedGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the max_speedGreaterThan of route",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of route",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutePaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/route/{id}": {
+    "put": {
+      "summary": "Update a route by ID",
+      "tags": [
+        "Route"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "route id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Update Route",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateRoutePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRouteResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a route by ID",
+      "tags": [
+        "Route"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "route id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteRouteResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one route by ID",
+      "tags": [
+        "Route"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "route id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Route",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindRouteResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

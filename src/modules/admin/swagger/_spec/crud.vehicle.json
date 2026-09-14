@@ -1,0 +1,375 @@
+{
+  "/api/v1/vehicle": {
+    "post": {
+      "summary": "Create a new vehicle",
+      "tags": [
+        "Vehicle"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Multipart form-data",
+        "content": {
+          "multipart/form-data": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "immatriculation": {
+                  "type": "string",
+                  "description": "the immatriculation of vehicle"
+                },
+                "type_vehicule": {
+                  "type": "string",
+                  "description": "the type_vehicule of vehicle"
+                },
+                "brand": {
+                  "type": "string",
+                  "description": "the brand of vehicle"
+                },
+                "modele": {
+                  "type": "string",
+                  "description": "the modele of vehicle"
+                },
+                "color": {
+                  "type": "string",
+                  "description": "the color of vehicle"
+                },
+                "year": {
+                  "type": "string",
+                  "description": "the year of vehicle"
+                },
+                "status": {
+                  "type": "string",
+                  "description": "the status of vehicle"
+                },
+                "gps_id": {
+                  "type": "string",
+                  "description": "the gps_id of vehicle"
+                },
+                "image": {
+                  "type": "string",
+                  "format": "binary",
+                  "description": "imageto upload"
+                }
+              },
+              "required": [
+                "image"
+              ]
+            }
+          }
+        },
+        "required": false
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVehicleResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of vehicle",
+      "tags": [
+        "Vehicle"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "immatriculation",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the immatriculation of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "type_vehicule",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the type_vehicule of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "brand",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the brand of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "modele",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the modele of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "color",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the color of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "year",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the year of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "yearLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the yearLessThan of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "yearLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the yearLessThanOrEqualTo of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "yearGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the yearGreaterThanOrEqualTo of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "yearGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the yearGreaterThan of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "status",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the status of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "gps_id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the gps_id of vehicle",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of vehicle",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VehiclePaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/vehicle/{id}": {
+    "put": {
+      "summary": "Update a vehicle by ID",
+      "tags": [
+        "Vehicle"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "vehicle id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Multipart form-data",
+        "content": {
+          "multipart/form-data": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "immatriculation": {
+                  "type": "string",
+                  "description": "the immatriculation of vehicle"
+                },
+                "type_vehicule": {
+                  "type": "string",
+                  "description": "the type_vehicule of vehicle"
+                },
+                "brand": {
+                  "type": "string",
+                  "description": "the brand of vehicle"
+                },
+                "modele": {
+                  "type": "string",
+                  "description": "the modele of vehicle"
+                },
+                "color": {
+                  "type": "string",
+                  "description": "the color of vehicle"
+                },
+                "year": {
+                  "type": "string",
+                  "description": "the year of vehicle"
+                },
+                "status": {
+                  "type": "string",
+                  "description": "the status of vehicle"
+                },
+                "gps_id": {
+                  "type": "string",
+                  "description": "the gps_id of vehicle"
+                },
+                "image": {
+                  "type": "string",
+                  "format": "binary",
+                  "description": "imageto upload"
+                }
+              },
+              "required": [
+                "image"
+              ]
+            }
+          }
+        },
+        "required": false
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a vehicle by ID",
+      "tags": [
+        "Vehicle"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "vehicle id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteVehicleResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one vehicle by ID",
+      "tags": [
+        "Vehicle"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "vehicle id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Vehicle",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindVehicleResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

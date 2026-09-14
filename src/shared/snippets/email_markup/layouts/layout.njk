@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ process.env.APP_NAME }}</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #f4f4f4;
+            }
+
+            table {
+                border-spacing: 0;
+                border-collapse: collapse;
+                margin: 0 auto;
+            }
+
+            .footer-row {
+                text-align: center;
+                font-size: 0.7rem;
+            }
+            /* Full wrapper to center content vertically and horizontally */
+            .email-wrapper {
+                width: 100%;
+                height: 100vh;
+                display: table;
+                text-align: center;
+                background-color: #f4f4f4;
+            }
+
+            /* Content container */
+            .email-container {
+                display: table-cell;
+                vertical-align: middle;
+                width: 100%;
+            }
+
+            .email-content {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: left;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                color: #565656;
+            }
+
+            .email-footer,
+            .email-header {
+                text-align: center;
+                padding: 20px;
+                background-color: #f9f9f9;
+            }
+
+            .email-body {
+                padding: 20px;
+            }
+
+            .email-body h1,
+            .email-body h2,
+            .email-body p {
+                margin: 0 0 16px;
+            }
+
+            .social-links img {
+                width: 24px;
+                margin: 0 8px;
+            }
+
+            .cta a {
+                text-decoration: none;
+                background-color: #f0ad4e;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            /* Responsive design for smaller screens */
+            @media (max-width: 600px) {
+                .email-content {
+                    width: 90%;
+                }
+
+                .email-body {
+                    font-size: 12px;
+                }
+            }
+
+            .order-details {
+                margin-top: 20px;
+                border-top: 1px solid #ddd;
+                padding-top: 15px;
+            }
+
+            .order-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 15px;
+                border-radius: 5px;
+            }
+
+            .order-table td,
+            .order-table th {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: left;
+                font-size: 14px;
+            }
+
+            .order-table th {
+                background-color: #f9f9f9;
+                font-weight: bold;
+            }
+
+            .order-summary {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+
+            .order-summary div {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 8px;
+            }
+
+            @media (max-width: 600px) {
+                .email-body,
+                .email-footer {
+                    padding: 15px;
+                }
+
+                .order-table td,
+                .order-table th {
+                    font-size: 12px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Wrapper table to center content -->
+        <div class="email-wrapper">
+            <div class="email-container">
+                <!-- Email Content -->
+                <table class="email-content">
+                    <!-- Header -->
+                    <tr>
+                        <td class="email-header">
+                            {% include '../partials/header.njk' %}
+                        </td>
+                    </tr>
+
+                    <!-- Body -->
+                    <tr>
+                        <td class="email-body">
+                            {% block content %}
+                                <h1>Welcome to {{ process.env.APP_NAME }}</h1>
+                                <p>
+                            Thank you for joining us. We’re excited to have you on board. If you have any
+                            questions, feel free to reach out.
+                        </p>
+                            {% endblock %}
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td class="email-footer">
+                            {% include '../partials/footer.njk' %}
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+
+</html>

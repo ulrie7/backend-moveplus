@@ -1,0 +1,3 @@
+{
+    "ignore": ["src/modules/**/swagger/_spec/*.json", "src/modules/**/swagger/_spec/*.yml"]
+}

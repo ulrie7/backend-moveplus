@@ -1,0 +1,291 @@
+{
+  "Vehicle": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a633b16a697a16adeaf8a91",
+        "description": "Unique identifier for the vehicle"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2026-01-11T07:20:10.046Z",
+        "description": "Timestamp when the vehicle was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2026-03-29T16:04:53.837Z",
+        "description": "Timestamp when the vehicle was last updated"
+      },
+      "immatriculation": {
+        "type": "string",
+        "example": "Odio soluta crepusculum peior.",
+        "description": "Immatriculation of Vehicle"
+      },
+      "type_vehicule": {
+        "type": "string",
+        "example": "Clam umquam deorsum voluntarius sordeo tredecim adulescens.",
+        "description": "Type_vehicule of Vehicle"
+      },
+      "brand": {
+        "type": "string",
+        "example": "Thymbra vinitor accommodo caelestis thalassinus.",
+        "description": "Brand of Vehicle"
+      },
+      "modele": {
+        "type": "string",
+        "example": "Thalassinus totus tubineus brevis suasoria.",
+        "description": "Modele of Vehicle"
+      },
+      "color": {
+        "type": "string",
+        "example": "Calculus cura deleniti spes compello conqueror comminor.",
+        "description": "Color of Vehicle"
+      },
+      "year": {
+        "type": "string",
+        "example": 5474037767853476,
+        "description": "Year of Vehicle"
+      },
+      "status": {
+        "type": "string",
+        "example": "Curvo demulceo cui cattus quibusdam tabula cubitum cohaero.",
+        "description": "Status of Vehicle"
+      },
+      "gps_id": {
+        "type": "string",
+        "example": "6a633b16a697a16adeaf8a92",
+        "description": "Gps_id of Vehicle"
+      },
+      "image": {
+        "type": "string",
+        "example": "Usus stella usus thalassinus callide agnosco.",
+        "description": "Image of Vehicle"
+      }
+    },
+    "required": []
+  },
+  "CreateVehiclePayload": {
+    "type": "object",
+    "properties": {
+      "immatriculation": {
+        "type": "string",
+        "example": "Coaegresco audentia coerceo amet conforto.",
+        "description": "Immatriculation of Vehicle"
+      },
+      "type_vehicule": {
+        "type": "string",
+        "example": "Curtus volo vehemens nihil.",
+        "description": "Type_vehicule of Vehicle"
+      },
+      "brand": {
+        "type": "string",
+        "example": "Volutabrum tepidus tenetur stella solium porro uxor quidem.",
+        "description": "Brand of Vehicle"
+      },
+      "modele": {
+        "type": "string",
+        "example": "Vos quidem aestivus aeneus ipsum verumtamen trepide cito explicabo cattus.",
+        "description": "Modele of Vehicle"
+      },
+      "color": {
+        "type": "string",
+        "example": "Tepidus sequi suppellex arca vetus ea verumtamen ustilo.",
+        "description": "Color of Vehicle"
+      },
+      "year": {
+        "type": "string",
+        "example": 2424390428134529,
+        "description": "Year of Vehicle"
+      },
+      "status": {
+        "type": "string",
+        "example": "Acerbitas trans timor utilis voveo dolore impedit suscipit crebro.",
+        "description": "Status of Vehicle"
+      },
+      "gps_id": {
+        "type": "string",
+        "example": "6a633b16a697a16adeaf8a94",
+        "description": "Gps_id of Vehicle"
+      },
+      "image": {
+        "type": "string",
+        "example": "Defungo agnosco bellum beneficium adstringo.",
+        "description": "Image of Vehicle"
+      }
+    },
+    "required": []
+  },
+  "UpdateVehiclePayload": {
+    "type": "object",
+    "properties": {
+      "immatriculation": {
+        "type": "string",
+        "example": "Concedo vigor aequus hic.",
+        "description": "Immatriculation of Vehicle"
+      },
+      "type_vehicule": {
+        "type": "string",
+        "example": "Clarus cohaero thalassinus tyrannus.",
+        "description": "Type_vehicule of Vehicle"
+      },
+      "brand": {
+        "type": "string",
+        "example": "Subseco apto adsum.",
+        "description": "Brand of Vehicle"
+      },
+      "modele": {
+        "type": "string",
+        "example": "Vestrum clementia aggredior magnam agnosco cetera.",
+        "description": "Modele of Vehicle"
+      },
+      "color": {
+        "type": "string",
+        "example": "Occaecati attero vere cruentus cinis.",
+        "description": "Color of Vehicle"
+      },
+      "year": {
+        "type": "string",
+        "example": 4624452428410906,
+        "description": "Year of Vehicle"
+      },
+      "status": {
+        "type": "string",
+        "example": "Ventus capto dolorum aer censura cetera canonicus sunt.",
+        "description": "Status of Vehicle"
+      },
+      "gps_id": {
+        "type": "string",
+        "example": "6a633b16a697a16adeaf8a96",
+        "description": "Gps_id of Vehicle"
+      },
+      "image": {
+        "type": "string",
+        "example": "Atavus caecus quibusdam defendo.",
+        "description": "Image of Vehicle"
+      }
+    },
+    "required": []
+  },
+  "VehiclePaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Vehicle"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateVehicleResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Vehicle"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Vehicle created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateVehicleResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Vehicle"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Vehicle updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteVehicleResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Vehicle deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindVehicleResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Vehicle"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Vehicle retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "VehicleErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}

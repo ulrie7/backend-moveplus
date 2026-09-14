@@ -1,0 +1,294 @@
+{
+  "/api/v1/admin": {
+    "post": {
+      "summary": "Create a new admin",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Create Admin",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateAdminPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAdminResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of admin",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of admin",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of admin",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "firstName",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the firstName of admin",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "lastName",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the lastName of admin",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "email",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the email of admin",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "identity",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the identity of admin",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of admin",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminPaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/profile": {
+    "get": {
+      "summary": "Get current profile",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Admin",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAdminProfileResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "put": {
+      "summary": "Update a current profile",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Update Admin",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateAdminPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAdminProfileResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a current profile",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteAdminProfileResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/{id}": {
+    "put": {
+      "summary": "Update a admin by ID",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "admin id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Update Admin",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateAdminPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAdminResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a admin by ID",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "admin id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteAdminResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one admin by ID",
+      "tags": [
+        "Admin"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "admin id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Admin",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindAdminResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "Route": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d47",
+        "description": "Unique identifier for the route"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2026-01-07T20:06:00.487Z",
+        "description": "Timestamp when the route was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2025-09-27T00:05:40.297Z",
+        "description": "Timestamp when the route was last updated"
+      },
+      "createdBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d48",
+        "description": "CreatedBy of Route"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d49",
+        "description": "UpdatedBy of Route"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d4a",
+        "description": "DeletedBy of Route"
+      },
+      "date_start": {
+        "type": "string",
+        "example": "2026-06-22T16:28:36.506Z",
+        "description": "Date_start of Route"
+      },
+      "date_end": {
+        "type": "string",
+        "example": "2026-07-07T15:09:41.881Z",
+        "description": "Date_end of Route"
+      },
+      "stop_time": {
+        "type": "string",
+        "example": 1798346634826169,
+        "description": "Stop_time of Route"
+      },
+      "stop_nb": {
+        "type": "string",
+        "example": 4198747996757294,
+        "description": "Stop_nb of Route"
+      },
+      "status": {
+        "type": "string",
+        "example": "Adnuo stella aurum cado iusto copiose accusator.",
+        "description": "Status of Route"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d4b",
+        "description": "Vehicle_id of Route"
+      },
+      "distance": {
+        "type": "string",
+        "example": 8920695873715787,
+        "description": "Distance of Route"
+      },
+      "average_speed": {
+        "type": "string",
+        "example": 8250171753264196,
+        "description": "Average_speed of Route"
+      },
+      "max_speed": {
+        "type": "string",
+        "example": 4016110673504143,
+        "description": "Max_speed of Route"
+      }
+    },
+    "required": []
+  },
+  "CreateRoutePayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d4d",
+        "description": "CreatedBy of Route"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d4e",
+        "description": "UpdatedBy of Route"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d4f",
+        "description": "DeletedBy of Route"
+      },
+      "date_start": {
+        "type": "string",
+        "example": "2025-08-12T14:41:41.583Z",
+        "description": "Date_start of Route"
+      },
+      "date_end": {
+        "type": "string",
+        "example": "2025-09-04T03:07:08.008Z",
+        "description": "Date_end of Route"
+      },
+      "stop_time": {
+        "type": "string",
+        "example": 5178358492256450,
+        "description": "Stop_time of Route"
+      },
+      "stop_nb": {
+        "type": "string",
+        "example": 5528628157111376,
+        "description": "Stop_nb of Route"
+      },
+      "status": {
+        "type": "string",
+        "example": "Excepturi valens attonbitus quibusdam.",
+        "description": "Status of Route"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d50",
+        "description": "Vehicle_id of Route"
+      },
+      "distance": {
+        "type": "string",
+        "example": 6207452585189429,
+        "description": "Distance of Route"
+      },
+      "average_speed": {
+        "type": "string",
+        "example": 1685286324885897,
+        "description": "Average_speed of Route"
+      },
+      "max_speed": {
+        "type": "string",
+        "example": 5954121620909618,
+        "description": "Max_speed of Route"
+      }
+    },
+    "required": []
+  },
+  "UpdateRoutePayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d52",
+        "description": "CreatedBy of Route"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d53",
+        "description": "UpdatedBy of Route"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d54",
+        "description": "DeletedBy of Route"
+      },
+      "date_start": {
+        "type": "string",
+        "example": "2025-07-28T15:53:24.478Z",
+        "description": "Date_start of Route"
+      },
+      "date_end": {
+        "type": "string",
+        "example": "2026-04-05T09:09:19.243Z",
+        "description": "Date_end of Route"
+      },
+      "stop_time": {
+        "type": "string",
+        "example": 2361130104322231,
+        "description": "Stop_time of Route"
+      },
+      "stop_nb": {
+        "type": "string",
+        "example": 3895496453652986,
+        "description": "Stop_nb of Route"
+      },
+      "status": {
+        "type": "string",
+        "example": "Curiositas barba cras pecus tutis.",
+        "description": "Status of Route"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a632a2eb7540fad31d45d55",
+        "description": "Vehicle_id of Route"
+      },
+      "distance": {
+        "type": "string",
+        "example": 4693701045462603,
+        "description": "Distance of Route"
+      },
+      "average_speed": {
+        "type": "string",
+        "example": 4580679745916944,
+        "description": "Average_speed of Route"
+      },
+      "max_speed": {
+        "type": "string",
+        "example": 682512863485304,
+        "description": "Max_speed of Route"
+      }
+    },
+    "required": []
+  },
+  "RoutePaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Route"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateRouteResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Route"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Route created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateRouteResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Route"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Route updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteRouteResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Route deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindRouteResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Route"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Route retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "RouteErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}

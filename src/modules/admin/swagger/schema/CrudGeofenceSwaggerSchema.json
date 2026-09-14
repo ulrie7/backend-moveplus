@@ -1,0 +1,291 @@
+{
+  "Geofence": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba75",
+        "description": "Unique identifier for the geofence"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2026-03-31T12:51:17.371Z",
+        "description": "Timestamp when the geofence was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2026-05-25T23:31:20.508Z",
+        "description": "Timestamp when the geofence was last updated"
+      },
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba76",
+        "description": "CreatedBy of Geofence"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba77",
+        "description": "UpdatedBy of Geofence"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba78",
+        "description": "DeletedBy of Geofence"
+      },
+      "zone_name": {
+        "type": "string",
+        "example": "Sunt tego abbas fugiat cui vilitas beneficium averto viduo capillus.",
+        "description": "Zone_name of Geofence"
+      },
+      "type_zone": {
+        "type": "string",
+        "example": "Apostolus angulus officiis dedecor solio catena pecus bibo.",
+        "description": "Type_zone of Geofence"
+      },
+      "coordinates": {
+        "type": "string",
+        "example": "Crinis aqua conatus tam audax consequuntur amissio conatus.",
+        "description": "Coordinates of Geofence"
+      },
+      "perimeter": {
+        "type": "string",
+        "example": 2466105130737742,
+        "description": "Perimeter of Geofence"
+      },
+      "statut": {
+        "type": "string",
+        "example": true,
+        "description": "Statut of Geofence"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba79",
+        "description": "Vehicle_id of Geofence"
+      }
+    },
+    "required": []
+  },
+  "CreateGeofencePayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba7b",
+        "description": "CreatedBy of Geofence"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba7c",
+        "description": "UpdatedBy of Geofence"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba7d",
+        "description": "DeletedBy of Geofence"
+      },
+      "zone_name": {
+        "type": "string",
+        "example": "Alienus pax vix velut sonitus supellex arbustum.",
+        "description": "Zone_name of Geofence"
+      },
+      "type_zone": {
+        "type": "string",
+        "example": "Officia appello degusto audentia suus.",
+        "description": "Type_zone of Geofence"
+      },
+      "coordinates": {
+        "type": "string",
+        "example": "Demoror color venustas astrum.",
+        "description": "Coordinates of Geofence"
+      },
+      "perimeter": {
+        "type": "string",
+        "example": 7136051087063898,
+        "description": "Perimeter of Geofence"
+      },
+      "statut": {
+        "type": "string",
+        "example": "",
+        "description": "Statut of Geofence"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba7e",
+        "description": "Vehicle_id of Geofence"
+      }
+    },
+    "required": []
+  },
+  "UpdateGeofencePayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba80",
+        "description": "CreatedBy of Geofence"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba81",
+        "description": "UpdatedBy of Geofence"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba82",
+        "description": "DeletedBy of Geofence"
+      },
+      "zone_name": {
+        "type": "string",
+        "example": "Annus curiositas varius benigne.",
+        "description": "Zone_name of Geofence"
+      },
+      "type_zone": {
+        "type": "string",
+        "example": "Acidus molestias laudantium.",
+        "description": "Type_zone of Geofence"
+      },
+      "coordinates": {
+        "type": "string",
+        "example": "Tepesco speculum templum cornu peior.",
+        "description": "Coordinates of Geofence"
+      },
+      "perimeter": {
+        "type": "string",
+        "example": 402056028293205,
+        "description": "Perimeter of Geofence"
+      },
+      "statut": {
+        "type": "string",
+        "example": "",
+        "description": "Statut of Geofence"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b5ba697a16adeafba83",
+        "description": "Vehicle_id of Geofence"
+      }
+    },
+    "required": []
+  },
+  "GeofencePaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Geofence"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateGeofenceResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Geofence"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Geofence created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateGeofenceResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Geofence"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Geofence updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteGeofenceResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Geofence deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindGeofenceResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Geofence"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Geofence retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "GeofenceErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}

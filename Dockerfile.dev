@@ -1,0 +1,24 @@
+# Base Dockerfile for services
+FROM node:18
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Install a development tool like Nodemon
+# RUN npm install -g nodemon
+# Copy necessary files
+COPY . .
+COPY package*.json ./
+COPY ./.env.dev .env
+
+#Expose application port
+EXPOSE 3000
+
+# Command for production or development
+CMD ["npm", "run", "dev"]

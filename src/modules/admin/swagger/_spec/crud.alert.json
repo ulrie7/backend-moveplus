@@ -1,0 +1,273 @@
+{
+  "/api/v1/alert": {
+    "post": {
+      "summary": "Create a new alert",
+      "tags": [
+        "Alert"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Create Alert",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateAlertPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAlertResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of alert",
+      "tags": [
+        "Alert"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "createdBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the createdBy of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "updatedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the updatedBy of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "deletedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the deletedBy of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "gps_id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the gps_id of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "alert_type",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the alert_type of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "seuil",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the seuil of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_generationStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_generationStart of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_generationEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_generationEnd of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "status",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the status of alert",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "message",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the message of alert",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of alert",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlertPaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/alert/{id}": {
+    "put": {
+      "summary": "Update a alert by ID",
+      "tags": [
+        "Alert"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "alert id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Update Alert",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateAlertPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAlertResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a alert by ID",
+      "tags": [
+        "Alert"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "alert id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteAlertResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one alert by ID",
+      "tags": [
+        "Alert"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "alert id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Alert",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindAlertResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

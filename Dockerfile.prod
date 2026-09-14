@@ -1,0 +1,22 @@
+# Base Dockerfile for services
+FROM node:18
+
+# Set working directory
+WORKDIR /app
+
+# Copy necessary files
+COPY . .
+COPY package*.json ./
+COPY ./.env.prod .env
+
+# Install only production dependencies
+RUN npm install --only=production
+
+# Install PM2 globally
+RUN npm install -g pm2
+
+# Expose application port
+EXPOSE 3000
+
+# Command for production or development
+CMD ["pm2-runtime", "start", "src/bin/www.js", "--name", "move+_backend", "-i", "max"]

@@ -1,0 +1,309 @@
+{
+  "/api/v1/report": {
+    "post": {
+      "summary": "Create a new report",
+      "tags": [
+        "Report"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Create Report",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateReportPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateReportResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of report",
+      "tags": [
+        "Report"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "createdBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the createdBy of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "updatedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the updatedBy of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "deletedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the deletedBy of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "id_admin",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the id_admin of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "id_vehicule",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the id_vehicule of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "report_type",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the report_type of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_generationStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_generationStart of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "date_generationEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the date_generationEnd of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "periode_debutStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the periode_debutStart of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "periode_debutEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the periode_debutEnd of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "periode_finStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the periode_finStart of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "periode_finEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the periode_finEnd of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "statutStart",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the statutStart of report",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "statutEnd",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the statutEnd of report",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of report",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportPaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/report/{id}": {
+    "put": {
+      "summary": "Update a report by ID",
+      "tags": [
+        "Report"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "report id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Update Report",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateReportPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a report by ID",
+      "tags": [
+        "Report"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "report id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteReportResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one report by ID",
+      "tags": [
+        "Report"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "report id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Report",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindReportResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

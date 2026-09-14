@@ -1,0 +1,292 @@
+{
+  "Admin": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a633ae7a697a16adeaf6ecb",
+        "description": "Unique identifier for the admin"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2025-10-30T05:44:06.229Z",
+        "description": "Timestamp when the admin was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2026-06-27T18:18:34.477Z",
+        "description": "Timestamp when the admin was last updated"
+      },
+      "firstName": {
+        "type": "string",
+        "example": "Gregorio17",
+        "description": "FirstName of Admin"
+      },
+      "lastName": {
+        "type": "string",
+        "example": "Alfonzo.Yost",
+        "description": "LastName of Admin"
+      },
+      "email": {
+        "type": "string",
+        "example": "Emanuel35@hotmail.com",
+        "description": "Email of Admin"
+      },
+      "identity": {
+        "type": "string",
+        "example": "6a633ae7a697a16adeaf6ecc",
+        "description": "Identity of Admin"
+      },
+      "roles": {
+        "type": "string",
+        "example": ["user"],
+        "description": "Roles of Admin"
+      },
+      "isActive": {
+        "type": "string",
+        "example": "",
+        "description": "IsActive of Admin"
+      },
+      "isBlocked": {
+        "type": "string",
+        "example": true,
+        "description": "IsBlocked of Admin"
+      },
+      "password": {
+        "type": "string",
+        "example": "password123",
+        "description": "Password"
+      }
+    },
+    "required": []
+  },
+  "CreateAdminPayload": {
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "example": "Jayda_Turner",
+        "description": "FirstName of Admin"
+      },
+      "lastName": {
+        "type": "string",
+        "example": "Maryse.Ledner36",
+        "description": "LastName of Admin"
+      },
+      "email": {
+        "type": "string",
+        "example": "Brannon_Block37@hotmail.com",
+        "description": "Email of Admin"
+      },
+      "roles": {
+        "type": "string",
+        "example": ["user"],
+        "description": "Roles of Admin"
+      },
+      "password": {
+        "type": "string",
+        "example": "password123",
+        "description": "Password"
+      }
+    },
+    "required": []
+  },
+  "UpdateAdminPayload": {
+    "type": "object",
+    "properties": {
+      "firstName": {
+        "type": "string",
+        "example": "Dasia63",
+        "description": "FirstName of Admin"
+      },
+      "lastName": {
+        "type": "string",
+        "example": "Marilou.Fay",
+        "description": "LastName of Admin"
+      },
+      "email": {
+        "type": "string",
+        "example": "Mateo_Harris@yahoo.com",
+        "description": "Email of Admin"
+      },
+      "roles": {
+        "type": "string",
+        "example": ["user"],
+        "description": "Roles of Admin"
+      }
+    },
+    "required": []
+  },
+  "AdminPaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Admin"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateAdminResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Admin"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Admin created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateAdminResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Admin"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Admin updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteAdminResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Admin deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindAdminResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Admin"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Admin retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "AdminErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  },
+  "GetAdminProfileResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Admin"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Admin retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "UpdateAdminProfileResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Admin"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Admin updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteAdminProfileResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Admin deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{% if firstName and firstName.trim() %}
+Hello {{ firstName }},
+{% else %}
+Hello,
+{% endif %}
+
+Security Alert: {{ alertType }}
+
+{{ alertMessage }}
+
+Time: {{ timestamp }}
+IP: {{ ipAddress }}
+Device: {{ device }}
+Location: {{ location }}
+
+If this was not you, please secure your account immediately.
+
+— OrangCode

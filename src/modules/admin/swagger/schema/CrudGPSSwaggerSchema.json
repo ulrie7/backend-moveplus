@@ -1,0 +1,306 @@
+{
+  "GPS": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf99fb",
+        "description": "Unique identifier for the gps"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2026-02-19T00:56:19.463Z",
+        "description": "Timestamp when the gps was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2026-05-28T00:36:02.064Z",
+        "description": "Timestamp when the gps was last updated"
+      },
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf99fc",
+        "description": "CreatedBy of GPS"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf99fd",
+        "description": "UpdatedBy of GPS"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf99fe",
+        "description": "DeletedBy of GPS"
+      },
+      "imei": {
+        "type": "string",
+        "example": "Cetera deleo denego vis repellat.",
+        "description": "Imei of GPS"
+      },
+      "status": {
+        "type": "string",
+        "example": "Adhuc tergo atrocitas subnecto torqueo angustus atrox tendo celer tabernus.",
+        "description": "Status of GPS"
+      },
+      "battery": {
+        "type": "string",
+        "example": 3452342281913696,
+        "description": "Battery of GPS"
+      },
+      "brand": {
+        "type": "string",
+        "example": "Delectus arbustum cribro compono utroque natus cupiditas clarus suadeo aut.",
+        "description": "Brand of GPS"
+      },
+      "last_connexion": {
+        "type": "string",
+        "example": "2025-09-01T08:16:22.896Z",
+        "description": "Last_connexion of GPS"
+      },
+      "model_device": {
+        "type": "string",
+        "example": "Supellex turbo vestigium.",
+        "description": "Model_device of GPS"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf99ff",
+        "description": "Vehicle_id of GPS"
+      }
+    },
+    "required": []
+  },
+  "CreateGPSPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a01",
+        "description": "CreatedBy of GPS"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a02",
+        "description": "UpdatedBy of GPS"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a03",
+        "description": "DeletedBy of GPS"
+      },
+      "imei": {
+        "type": "string",
+        "example": "Conatus tutamen suus aestivus.",
+        "description": "Imei of GPS"
+      },
+      "status": {
+        "type": "string",
+        "example": "Infit arbor comminor sol solio centum.",
+        "description": "Status of GPS"
+      },
+      "battery": {
+        "type": "string",
+        "example": 5116987785686872,
+        "description": "Battery of GPS"
+      },
+      "brand": {
+        "type": "string",
+        "example": "Delego spoliatio accusamus delectatio eveniet animi deficio pecus textus altus.",
+        "description": "Brand of GPS"
+      },
+      "last_connexion": {
+        "type": "string",
+        "example": "2026-01-03T05:40:59.152Z",
+        "description": "Last_connexion of GPS"
+      },
+      "model_device": {
+        "type": "string",
+        "example": "Amissio defleo cognatus atrox amicitia nesciunt verbum comprehendo surgo stillicidium.",
+        "description": "Model_device of GPS"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a04",
+        "description": "Vehicle_id of GPS"
+      }
+    },
+    "required": []
+  },
+  "UpdateGPSPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a06",
+        "description": "CreatedBy of GPS"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a07",
+        "description": "UpdatedBy of GPS"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a08",
+        "description": "DeletedBy of GPS"
+      },
+      "imei": {
+        "type": "string",
+        "example": "Articulus suscipio cenaculum cilicium certus substantia reiciendis arbitro correptius attero.",
+        "description": "Imei of GPS"
+      },
+      "status": {
+        "type": "string",
+        "example": "Ipsam vulgus sopor tollo adeo demoror.",
+        "description": "Status of GPS"
+      },
+      "battery": {
+        "type": "string",
+        "example": 8261218937608454,
+        "description": "Battery of GPS"
+      },
+      "brand": {
+        "type": "string",
+        "example": "Tempus consequatur apostolus substantia cetera tunc vitae bos testimonium adeo.",
+        "description": "Brand of GPS"
+      },
+      "last_connexion": {
+        "type": "string",
+        "example": "2026-03-31T08:26:48.529Z",
+        "description": "Last_connexion of GPS"
+      },
+      "model_device": {
+        "type": "string",
+        "example": "Via cur calamitas validus turbo tenus.",
+        "description": "Model_device of GPS"
+      },
+      "vehicle_id": {
+        "type": "string",
+        "example": "6a633b2da697a16adeaf9a09",
+        "description": "Vehicle_id of GPS"
+      }
+    },
+    "required": []
+  },
+  "GPSPaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GPS"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateGPSResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/GPS"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "GPS created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateGPSResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/GPS"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "GPS updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteGPSResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "GPS deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindGPSResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/GPS"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "GPS retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "GPSErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}

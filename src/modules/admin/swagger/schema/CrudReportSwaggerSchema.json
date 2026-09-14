@@ -1,0 +1,306 @@
+{
+  "Report": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde3c",
+        "description": "Unique identifier for the report"
+      },
+      "createdAt": {
+        "type": "string",
+        "example": "2025-12-16T07:12:01.195Z",
+        "description": "Timestamp when the report was created"
+      },
+      "updatedAt": {
+        "type": "string",
+        "example": "2026-03-29T18:24:24.135Z",
+        "description": "Timestamp when the report was last updated"
+      },
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde3d",
+        "description": "CreatedBy of Report"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde3e",
+        "description": "UpdatedBy of Report"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde3f",
+        "description": "DeletedBy of Report"
+      },
+      "id_admin": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde40",
+        "description": "Id_admin of Report"
+      },
+      "id_vehicule": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde41",
+        "description": "Id_vehicule of Report"
+      },
+      "report_type": {
+        "type": "string",
+        "example": "Vivo defero attonbitus carmen dens statua aeger thymum.",
+        "description": "Report_type of Report"
+      },
+      "date_generation": {
+        "type": "string",
+        "example": "2025-08-03T17:15:26.359Z",
+        "description": "Date_generation of Report"
+      },
+      "periode_debut": {
+        "type": "string",
+        "example": "2026-06-05T20:36:02.068Z",
+        "description": "Periode_debut of Report"
+      },
+      "periode_fin": {
+        "type": "string",
+        "example": "2025-10-25T06:07:10.281Z",
+        "description": "Periode_fin of Report"
+      },
+      "statut": {
+        "type": "string",
+        "example": "2026-05-22T13:03:35.418Z",
+        "description": "Statut of Report"
+      }
+    },
+    "required": []
+  },
+  "CreateReportPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde43",
+        "description": "CreatedBy of Report"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde44",
+        "description": "UpdatedBy of Report"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde45",
+        "description": "DeletedBy of Report"
+      },
+      "id_admin": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde46",
+        "description": "Id_admin of Report"
+      },
+      "id_vehicule": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde47",
+        "description": "Id_vehicule of Report"
+      },
+      "report_type": {
+        "type": "string",
+        "example": "Torqueo vito trans celebrer consuasor.",
+        "description": "Report_type of Report"
+      },
+      "date_generation": {
+        "type": "string",
+        "example": "2026-07-17T12:32:26.912Z",
+        "description": "Date_generation of Report"
+      },
+      "periode_debut": {
+        "type": "string",
+        "example": "2026-07-10T14:25:00.714Z",
+        "description": "Periode_debut of Report"
+      },
+      "periode_fin": {
+        "type": "string",
+        "example": "2026-04-16T10:50:42.119Z",
+        "description": "Periode_fin of Report"
+      },
+      "statut": {
+        "type": "string",
+        "example": "2026-04-13T15:25:26.225Z",
+        "description": "Statut of Report"
+      }
+    },
+    "required": []
+  },
+  "UpdateReportPayload": {
+    "type": "object",
+    "properties": {
+      "createdBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde49",
+        "description": "CreatedBy of Report"
+      },
+      "updatedBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde4a",
+        "description": "UpdatedBy of Report"
+      },
+      "deletedBy": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde4b",
+        "description": "DeletedBy of Report"
+      },
+      "id_admin": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde4c",
+        "description": "Id_admin of Report"
+      },
+      "id_vehicule": {
+        "type": "string",
+        "example": "6a633b93a697a16adeafde4d",
+        "description": "Id_vehicule of Report"
+      },
+      "report_type": {
+        "type": "string",
+        "example": "Expedita quod iste apud usque sollicito degero valens articulus paens.",
+        "description": "Report_type of Report"
+      },
+      "date_generation": {
+        "type": "string",
+        "example": "2026-02-24T06:49:22.551Z",
+        "description": "Date_generation of Report"
+      },
+      "periode_debut": {
+        "type": "string",
+        "example": "2026-03-08T16:55:19.002Z",
+        "description": "Periode_debut of Report"
+      },
+      "periode_fin": {
+        "type": "string",
+        "example": "2025-10-02T06:39:46.583Z",
+        "description": "Periode_fin of Report"
+      },
+      "statut": {
+        "type": "string",
+        "example": "2025-12-08T10:02:52.003Z",
+        "description": "Statut of Report"
+      }
+    },
+    "required": []
+  },
+  "ReportPaginationResponse": {
+    "type": "object",
+    "properties": {
+      "page": {
+        "type": "integer",
+        "example": 1,
+        "description": "Current page number"
+      },
+      "totalPages": {
+        "type": "integer",
+        "example": 10,
+        "description": "Total number of pages"
+      },
+      "totalItems": {
+        "type": "integer",
+        "example": 100,
+        "description": "Total number of items"
+      },
+      "perPage": {
+        "type": "integer",
+        "example": 10,
+        "description": "Items per page"
+      },
+      "data": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Report"
+        },
+        "description": "Array of results for the current page"
+      }
+    }
+  },
+  "CreateReportResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Report"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the create operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Report created successfully",
+        "description": "Creation success message"
+      }
+    }
+  },
+  "UpdateReportResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Report"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the update operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Report updated successfully",
+        "description": "Update success message"
+      }
+    }
+  },
+  "DeleteReportResponse": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the delete operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Report deleted successfully",
+        "description": "Deletion success message"
+      }
+    }
+  },
+  "FindReportResponse": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "$ref": "#/components/schemas/Report"
+      },
+      "success": {
+        "type": "boolean",
+        "example": true,
+        "description": "Indicates if the find operation was successful"
+      },
+      "message": {
+        "type": "string",
+        "example": "Report retrieved successfully",
+        "description": "Retrieval success message"
+      }
+    }
+  },
+  "ReportErrorResponse": {
+    "type": "object",
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "An error occurred",
+        "description": "Error message"
+      },
+      "code": {
+        "type": "integer",
+        "example": 400,
+        "description": "HTTP status code"
+      },
+      "success": {
+        "type": "boolean",
+        "example": false,
+        "description": "Indicates if the operation was unsuccessful"
+      }
+    }
+  }
+}

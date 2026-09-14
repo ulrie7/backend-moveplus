@@ -1,0 +1,484 @@
+{
+  "/api/v1/admin/auth/verify-account": {
+    "post": {
+      "summary": "Verify admin account",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Verify Admin Account",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VerifyAdminAccountPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Account verified",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyAdminAccountResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/resend-account-verification-code": {
+    "post": {
+      "summary": "Resend admin account verification code",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Resend Admin Account Verification Code",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ResendAdminAccountVerificationCodePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Account verification code resent successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResendAdminAccountVerificationCodeResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/signin": {
+    "post": {
+      "summary": "Sign in admin",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Sign in Admin",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SigninAdminPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Signin successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SigninAdminResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/activate-mfa-token": {
+    "post": {
+      "summary": "Activate admin MFA token",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Activate Admin MFA Token",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ActivateAdminMfaTokenPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "MFA token activated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivateAdminMfaTokenResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/resend-mfa-code": {
+    "post": {
+      "summary": "Resend admin MFA code",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Resend Admin MFA Code",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ResendAdminMfaCodePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "MFA code resent successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResendAdminMfaCodeResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/refresh-token": {
+    "post": {
+      "summary": "Refresh admin token",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Refresh Admin Token",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/RefreshAdminTokenPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Token refreshed successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshAdminTokenResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/generate-password-restoration-code": {
+    "post": {
+      "summary": "Generate admin password restoration code",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Generate Admin Password Restoration Code",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/GenerateAdminPasswordRestorationCodePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Password restoration code generated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateAdminPasswordRestorationCodeResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/verify-password-reset-code": {
+    "post": {
+      "summary": "Verify admin password reset code",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Verify Admin Password Reset Code",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/VerifyAdminPasswordResetCodePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Password reset code verified",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyAdminPasswordResetCodeResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/reset-password": {
+    "post": {
+      "summary": "Reset admin password",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Reset Admin Password",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ResetAdminPasswordPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Password reset successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetAdminPasswordResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/change-password": {
+    "post": {
+      "summary": "Change admin password",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Change Admin Password",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ChangeAdminPasswordPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Password changed successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangeAdminPasswordResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/signout": {
+    "post": {
+      "summary": "Signout admin",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": null,
+      "responses": {
+        "201": {
+          "description": "Signout successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignoutAdminResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/google/signin": {
+    "get": {
+      "summary": "Google sign in admin",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": null,
+      "responses": {
+        "201": {
+          "description": "Signed in via Google successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleAdminSigninResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "post": {
+      "summary": "Authenticate admin using Google tokens",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Google authentication tokens",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AdminSigninWithGooglePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Google callback processed successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleAdminCallbackResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Invalid Google tokens provided"
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/admin/auth/google/callback": {
+    "post": {
+      "summary": "Google admin callback",
+      "tags": [
+        "AdminAuth"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Google Admin Callback",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/GoogleAdminCallbackPayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Google callback processed successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleAdminCallbackResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    }
+  }
+}

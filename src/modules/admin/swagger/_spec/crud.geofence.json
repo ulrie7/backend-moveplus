@@ -1,0 +1,291 @@
+{
+  "/api/v1/geofence": {
+    "post": {
+      "summary": "Create a new geofence",
+      "tags": [
+        "Geofence"
+      ],
+      "parameters": [],
+      "requestBody": {
+        "description": "Create Geofence",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateGeofencePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Created successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateGeofenceResponse"
+              }
+            }
+          }
+        },
+        "400": {
+          "description": "Bad request"
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get list of geofence",
+      "tags": [
+        "Geofence"
+      ],
+      "parameters": [
+        {
+          "in": "query",
+          "name": "perPage",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the perPage of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "page",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the page of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "createdBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the createdBy of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "updatedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the updatedBy of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "deletedBy",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the deletedBy of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "zone_name",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the zone_name of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "type_zone",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the type_zone of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "coordinates",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the coordinates of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "perimeter",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the perimeter of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "perimeterLessThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the perimeterLessThan of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "perimeterLessThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the perimeterLessThanOrEqualTo of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "perimeterGreaterThanOrEqualTo",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the perimeterGreaterThanOrEqualTo of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "perimeterGreaterThan",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the perimeterGreaterThan of geofence",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "vehicle_id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "the vehicle_id of geofence",
+          "required": false
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "A list of geofence",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GeofencePaginationResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  },
+  "/api/v1/geofence/{id}": {
+    "put": {
+      "summary": "Update a geofence by ID",
+      "tags": [
+        "Geofence"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "geofence id",
+          "required": true
+        }
+      ],
+      "requestBody": {
+        "description": "Update Geofence",
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateGeofencePayload"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Updated successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGeofenceResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "delete": {
+      "summary": "Delete a geofence by ID",
+      "tags": [
+        "Geofence"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "geofence id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "Deleted successfully",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteGeofenceResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    },
+    "get": {
+      "summary": "Get one geofence by ID",
+      "tags": [
+        "Geofence"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "id",
+          "schema": {
+            "type": "string"
+          },
+          "description": "geofence id",
+          "required": true
+        }
+      ],
+      "requestBody": null,
+      "responses": {
+        "200": {
+          "description": "One Geofence",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FindGeofenceResponse"
+              }
+            }
+          }
+        }
+      },
+      "description": ""
+    }
+  }
+}

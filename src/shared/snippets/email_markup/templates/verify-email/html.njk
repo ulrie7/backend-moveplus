@@ -1,0 +1,23 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+  <div>
+    <h3>Email Verification</h3>
+
+    <p>Hello {{ fullName }}</p>
+
+    <p>
+      You registered an account on OrangCode. Before being able to use your account, you need to verify that this is your email address using the following code:
+    </p>
+
+    <p>
+      <strong>Verification Code: {{ code }}</strong>
+    </p>
+
+    <p>
+      This code will expire in {{ expiryMinutes }} minutes.
+    </p>
+
+    <p>Kind Regards,<br> OrangCode</p>
+  </div>
+{% endblock %}
