@@ -34,3 +34,15 @@ coverage
 
 # Vitest
 __screenshots__/
+ 
+ # Ignorer les dossiers node_modules
+/node_modules/
+/freeradius_configs/
+/freeradius_logs/
+
+# Ignorer les fichiers .env
+/.env
+
+# Ignorer les fichiers système (optionnel)
+.DS_Store
+Thumbs.db
