@@ -13,6 +13,10 @@
             "schema": {
               "type": "object",
               "properties": {
+                "imei": {
+                  "type": "number",
+                  "description": "the imei of vehicle"
+                },
                 "immatriculation": {
                   "type": "string",
                   "description": "the immatriculation of vehicle"
@@ -52,12 +56,13 @@
                 }
               },
               "required": [
+                "imei",
                 "image"
               ]
             }
           }
         },
-        "required": false
+        "required": true
       },
       "responses": {
         "201": {
@@ -98,6 +103,15 @@
             "type": "string"
           },
           "description": "the page of vehicle",
+          "required": false
+        },
+        {
+          "in": "query",
+          "name": "imei",
+          "schema": {
+            "type": "number"
+          },
+          "description": "the imei of vehicle",
           "required": false
         },
         {
@@ -249,6 +263,10 @@
             "schema": {
               "type": "object",
               "properties": {
+                "imei": {
+                  "type": "number",
+                  "description": "the imei of vehicle"
+                },
                 "immatriculation": {
                   "type": "string",
                   "description": "the immatriculation of vehicle"

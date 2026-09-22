@@ -7,8 +7,8 @@ module.exports = class VehicleServices extends CoreServices {
 
   constructor() {
     super();
-    this.Vehicle = require("../../admin/models/vehicule.model");
-    this.VehicleResources = require("../../admin/resources/vehicule.resources");
+    this.Vehicle = require("../../admin/models/vehicle.model");
+    this.VehicleResources = require("../../admin/resources/vehicle.resources");
     this.SharedAdminServices = new(require("../../admin/services/shared.admin.services"))();
   }
   /**
@@ -44,6 +44,12 @@ module.exports = class VehicleServices extends CoreServices {
     } : {}
 
     const schema = {}
+    if (this.HelperMethods.issetData(payload.name)) {
+      schema.name = this.HelperMethods.getValidTrimData(payload.name);
+    }
+    if (this.HelperMethods.issetData(payload.imei)) {
+      schema.imei = Number(payload.imei);
+    }
     if (this.HelperMethods.issetData(payload.immatriculation)) {
       schema.immatriculation = this.HelperMethods.getValidTrimData(payload.immatriculation);
     }
@@ -111,6 +117,13 @@ module.exports = class VehicleServices extends CoreServices {
     if (!vehicle) throw new this.NotFoundError(this.ERROR_MESSAGES.CAN_NOT_FIND('this vehicle'))
 
     const schema = {}
+  
+    if (this.HelperMethods.issetData(payload.name)) {
+      schema.name = this.HelperMethods.getValidTrimData(payload.name);
+    }
+    if (this.HelperMethods.issetData(payload.imei)) {
+      schema.imei = Number(payload.imei);
+    }
     if (this.HelperMethods.issetData(payload.immatriculation)) {
       schema.immatriculation = this.HelperMethods.getValidTrimData(payload.immatriculation);
     }

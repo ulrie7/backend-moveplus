@@ -143,6 +143,11 @@ module.exports = class VehicleController extends CoreServices {
     let countDocumentSchema = {}
 
     const querySchema = []
+    if (query.imei) {
+      querySchema.push({
+        imei: Number(query.imei)
+      })
+    }
     if (query.immatriculation) {
       querySchema.push({
         immatriculation: {

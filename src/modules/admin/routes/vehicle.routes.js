@@ -28,6 +28,7 @@ module.exports = class VehicleRoutes extends ParentRoute {
 
     // Route: Create Vehicle
     swaggerBuilder.addRoute('/api/v1/vehicle', 'post', 'Create a new vehicle', ['Vehicle'])
+      .addFormField('imei', 'number', 'the imei of vehicle', true)
       .addFormField('immatriculation', 'string', 'the immatriculation of vehicle', false)
       .addFormField('type_vehicule', 'string', 'the type_vehicule of vehicle', false)
       .addFormField('brand', 'string', 'the brand of vehicle', false)
@@ -48,6 +49,7 @@ module.exports = class VehicleRoutes extends ParentRoute {
     swaggerBuilder.addRoute('/api/v1/vehicle', 'get', 'Get list of vehicle', ['Vehicle'])
       .addQueryParam('perPage', 'string', 'the perPage of vehicle', false)
       .addQueryParam('page', 'string', 'the page of vehicle', false)
+      .addQueryParam('imei', 'number', 'the imei of vehicle', false)
       .addQueryParam('immatriculation', 'string', 'the immatriculation of vehicle', false)
       .addQueryParam('type_vehicule', 'string', 'the type_vehicule of vehicle', false)
       .addQueryParam('brand', 'string', 'the brand of vehicle', false)
@@ -68,6 +70,7 @@ module.exports = class VehicleRoutes extends ParentRoute {
     // Route: Update Vehicle
     swaggerBuilder.addRoute('/api/v1/vehicle/{id}', 'put', 'Update a vehicle by ID', ['Vehicle'])
       .addPathParam('id', 'string', 'vehicle id', true)
+      .addFormField('imei', 'number', 'the imei of vehicle', false)
       .addFormField('immatriculation', 'string', 'the immatriculation of vehicle', false)
       .addFormField('type_vehicule', 'string', 'the type_vehicule of vehicle', false)
       .addFormField('brand', 'string', 'the brand of vehicle', false)

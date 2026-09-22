@@ -17,6 +17,11 @@
         "example": "2026-03-29T16:04:53.837Z",
         "description": "Timestamp when the vehicle was last updated"
       },
+      "imei": {
+        "type": "number",
+        "example": 860123456789012,
+        "description": "IMEI of Vehicle"
+      },
       "immatriculation": {
         "type": "string",
         "example": "Odio soluta crepusculum peior.",
@@ -68,6 +73,11 @@
   "CreateVehiclePayload": {
     "type": "object",
     "properties": {
+      "imei": {
+        "type": "number",
+        "example": 860123456789012,
+        "description": "IMEI of Vehicle"
+      },
       "immatriculation": {
         "type": "string",
         "example": "Coaegresco audentia coerceo amet conforto.",
@@ -114,11 +124,18 @@
         "description": "Image of Vehicle"
       }
     },
-    "required": []
+    "required": [
+      "imei"
+    ]
   },
   "UpdateVehiclePayload": {
     "type": "object",
     "properties": {
+      "imei": {
+        "type": "number",
+        "example": 860123456789012,
+        "description": "IMEI of Vehicle"
+      },
       "immatriculation": {
         "type": "string",
         "example": "Concedo vigor aequus hic.",
